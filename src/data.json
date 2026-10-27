@@ -1,0 +1,2061 @@
+{
+  "slug": "windows-error-guide",
+  "checkedAt": "2026-10-27",
+  "title": {
+    "ko": "Windows 오류코드 안내",
+    "en": "Windows error guide",
+    "es": "Guía de errores de Windows",
+    "zh": "Windows 错误指南",
+    "ja": "Windows エラーガイド",
+    "de": "Windows-Fehlerhilfe"
+  },
+  "description": {
+    "ko": "작업 맥락별 오류코드, 안전한 확인항목, Microsoft 공식 안내.",
+    "en": "Error codes by task, safe checks and official Microsoft guidance.",
+    "es": "Códigos por tarea, comprobaciones seguras y ayuda oficial de Microsoft.",
+    "zh": "按操作场景查询错误代码、安全检查及 Microsoft 官方说明。",
+    "ja": "操作別のエラーコード、安全な確認項目、Microsoft の公式案内。",
+    "de": "Fehlercodes nach Vorgang, sichere Prüfungen und offizielle Microsoft-Hilfe."
+  },
+  "categoryLabels": {
+    "device-manager": {
+      "ko": "장치 관리자",
+      "en": "Device Manager",
+      "es": "Administrador de dispositivos",
+      "zh": "设备管理器",
+      "ja": "デバイス マネージャー",
+      "de": "Geräte-Manager"
+    },
+    "windows-update": {
+      "ko": "Windows 업데이트",
+      "en": "Windows Update",
+      "es": "Windows Update",
+      "zh": "Windows 更新",
+      "ja": "Windows Update",
+      "de": "Windows Update"
+    },
+    "activation": {
+      "ko": "정품 인증",
+      "en": "Activation",
+      "es": "Activación",
+      "zh": "激活",
+      "ja": "ライセンス認証",
+      "de": "Aktivierung"
+    },
+    "windows-setup": {
+      "ko": "설치·업그레이드",
+      "en": "Setup and upgrade",
+      "es": "Instalación y actualización",
+      "zh": "安装与升级",
+      "ja": "セットアップ・アップグレード",
+      "de": "Installation und Upgrade"
+    },
+    "optional-feature": {
+      "ko": "선택적 기능",
+      "en": "Optional features",
+      "es": "Características opcionales",
+      "zh": "可选功能",
+      "ja": "オプション機能",
+      "de": "Optionale Features"
+    }
+  },
+  "entries": [
+    {
+      "id": "device-manager-code-10",
+      "slug": "device-manager-code-10",
+      "code": "Code 10",
+      "aliases": [
+        "CM_PROB_FAILED_START"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-failed-start"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치 시작 실패",
+          "summary": "장치가 시작되지 않았다는 상태이며 하드웨어 고장을 확정하지 않는다.",
+          "checks": [
+            "장치 속성에서 전체 상태 메시지와 드라이버 버전을 기록한다.",
+            "최근 드라이버 변경과 제조사 제공 버전을 비교한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device start failure",
+          "summary": "The device did not start; this alone does not prove hardware damage.",
+          "checks": [
+            "Record the full device status and driver version in Properties.",
+            "Compare recent driver changes with the version offered by the manufacturer."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "Fallo al iniciar el dispositivo",
+          "summary": "El dispositivo no arrancó; el código no confirma daños físicos.",
+          "checks": [
+            "Anota el estado completo y la versión del controlador en Propiedades.",
+            "Compara los cambios recientes con la versión ofrecida por el fabricante."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备启动失败",
+          "summary": "设备未能启动；仅凭此代码无法确定硬件损坏。",
+          "checks": [
+            "在属性中记录完整设备状态及驱动版本。",
+            "比较近期驱动变更与厂商提供的版本。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "デバイスの起動失敗",
+          "summary": "起動できない状態。これだけでハードウェア故障とは判断できない。",
+          "checks": [
+            "プロパティで状態の全文とドライバーの版を記録する。",
+            "最近のドライバー変更とメーカー提供の版を比較する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Gerätestart fehlgeschlagen",
+          "summary": "Das Gerät startete nicht; daraus allein folgt kein Hardwaredefekt.",
+          "checks": [
+            "Vollständigen Gerätestatus und Treiberversion in den Eigenschaften notieren.",
+            "Letzte Treiberänderungen mit der vom Hersteller angebotenen Version vergleichen."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-14",
+      "slug": "device-manager-code-14",
+      "code": "Code 14",
+      "aliases": [
+        "CM_PROB_NEED_RESTART"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-need-restart"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치 변경 후 재시작 필요",
+          "summary": "장치가 정상 작동하기 전에 Windows 재시작이 필요한 상태다.",
+          "checks": [
+            "열린 문서와 진행 중 작업을 저장한다.",
+            "다시 시작 후 같은 장치의 상태 코드가 남는지 확인한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Restart needed for the device",
+          "summary": "Windows needs a restart before this device can function properly.",
+          "checks": [
+            "Save open documents and active work.",
+            "After restarting, check whether the same device still shows the code."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "El dispositivo necesita reiniciar",
+          "summary": "Windows necesita reiniciarse para que el dispositivo funcione correctamente.",
+          "checks": [
+            "Guarda los documentos y el trabajo abierto.",
+            "Tras reiniciar, comprueba si el mismo dispositivo conserva el código."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备需要重启",
+          "summary": "Windows 需要重启后，该设备才能正常工作。",
+          "checks": [
+            "保存打开的文档和正在进行的工作。",
+            "重启后检查同一设备是否仍显示该代码。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "デバイスに再起動が必要",
+          "summary": "正常動作のために Windows の再起動が必要な状態。",
+          "checks": [
+            "開いている文書と作業を保存する。",
+            "再起動後、同じデバイスにコードが残るか確認する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Neustart für das Gerät erforderlich",
+          "summary": "Windows muss neu starten, damit dieses Gerät richtig arbeiten kann.",
+          "checks": [
+            "Offene Dokumente und laufende Arbeit speichern.",
+            "Nach dem Neustart prüfen, ob dasselbe Gerät den Code weiter anzeigt."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-22",
+      "slug": "device-manager-code-22",
+      "code": "Code 22",
+      "aliases": [
+        "CM_PROB_DISABLED"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-disabled"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치 사용 안 함 상태",
+          "summary": "장치 관리자에서 장치가 비활성화되어 있음을 나타낸다.",
+          "checks": [
+            "장치 속성과 사용 가능 메뉴의 표시를 확인한다.",
+            "직접 끈 장치인지, 조직 정책으로 관리되는지 확인한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device is disabled",
+          "summary": "Device Manager reports that this device is disabled.",
+          "checks": [
+            "Inspect device properties and the available enable option.",
+            "Check whether you disabled it or organization policy manages it."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "Dispositivo deshabilitado",
+          "summary": "El Administrador de dispositivos indica que está deshabilitado.",
+          "checks": [
+            "Revisa las propiedades y si aparece la opción de habilitar.",
+            "Comprueba si lo deshabilitaste tú o lo gestiona una directiva de empresa."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备处于禁用状态",
+          "summary": "设备管理器报告该设备已被禁用。",
+          "checks": [
+            "检查设备属性及是否显示启用选项。",
+            "确认是自己禁用，还是由组织策略管理。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "デバイスが無効",
+          "summary": "デバイス マネージャーが無効の状態を報告している。",
+          "checks": [
+            "プロパティと有効化の選択肢を確認する。",
+            "自分で無効化したか、組織の管理対象か確認する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Gerät ist deaktiviert",
+          "summary": "Der Geräte-Manager meldet das Gerät als deaktiviert.",
+          "checks": [
+            "Geräteeigenschaften und die verfügbare Aktivierungsoption prüfen.",
+            "Klären, ob die Deaktivierung selbst erfolgte oder eine Organisationsrichtlinie gilt."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-28",
+      "slug": "device-manager-code-28",
+      "code": "Code 28",
+      "aliases": [
+        "CM_PROB_FAILED_INSTALL"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-failed-install"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치 드라이버 미설치",
+          "summary": "해당 장치에 필요한 드라이버가 설치되지 않은 상태다.",
+          "checks": [
+            "PC·장치 모델과 Windows 버전·아키텍처를 확인한다.",
+            "제조사 공식 지원에서 해당 모델용 드라이버의 지원 OS를 비교한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device driver missing",
+          "summary": "The required driver is not installed for this device.",
+          "checks": [
+            "Identify the PC/device model, Windows version and architecture.",
+            "Compare the supported OS on the maker’s official driver page for that model."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "Falta el controlador del dispositivo",
+          "summary": "No está instalado el controlador que necesita este dispositivo.",
+          "checks": [
+            "Identifica el modelo, la versión de Windows y la arquitectura.",
+            "Compara el sistema admitido en la página oficial del controlador de ese modelo."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "缺少设备驱动",
+          "summary": "此设备所需的驱动尚未安装。",
+          "checks": [
+            "确认电脑或设备型号、Windows 版本及体系结构。",
+            "核对厂商官方驱动页面中该型号支持的系统。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "デバイスのドライバー未導入",
+          "summary": "必要なドライバーがインストールされていない。",
+          "checks": [
+            "PC・機器の型番、Windows の版とアーキテクチャを確認する。",
+            "メーカー公式の型番別ドライバーで対応 OS を照合する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Gerätetreiber fehlt",
+          "summary": "Der benötigte Treiber ist für dieses Gerät nicht installiert.",
+          "checks": [
+            "PC-/Gerätemodell, Windows-Version und Architektur feststellen.",
+            "Das unterstützte Betriebssystem auf der offiziellen Treiberseite für dieses Modell vergleichen."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-31",
+      "slug": "device-manager-code-31",
+      "code": "Code 31",
+      "aliases": [
+        "CM_PROB_FAILED_ADD"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-failed-add"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치 드라이버 로드 문제",
+          "summary": "Windows가 필요한 드라이버를 정상적으로 로드하지 못한 상태다.",
+          "checks": [
+            "장치 속성에서 드라이버 공급자·버전·날짜를 기록한다.",
+            "최근 Windows·드라이버 업데이트와 최초 발생 시점을 비교한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device driver loading problem",
+          "summary": "Windows could not load the required device drivers correctly.",
+          "checks": [
+            "Record the driver provider, version and date in device properties.",
+            "Compare the first occurrence with recent Windows or driver updates."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "Problema al cargar el controlador",
+          "summary": "Windows no pudo cargar correctamente los controladores necesarios.",
+          "checks": [
+            "Anota proveedor, versión y fecha en las propiedades del dispositivo.",
+            "Compara el primer fallo con actualizaciones recientes de Windows o del controlador."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备驱动加载问题",
+          "summary": "Windows 未能正常加载设备所需的驱动。",
+          "checks": [
+            "在设备属性中记录驱动提供商、版本和日期。",
+            "比较首次出现时间与近期 Windows 或驱动更新的时间。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "ドライバーの読み込みに問題",
+          "summary": "Windows が必要なドライバーを正常に読み込めない状態。",
+          "checks": [
+            "プロパティでドライバーの提供元、版、日付を記録する。",
+            "初回発生と最近の Windows・ドライバー更新の時期を比較する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Problem beim Laden des Gerätetreibers",
+          "summary": "Windows konnte die benötigten Gerätetreiber nicht richtig laden.",
+          "checks": [
+            "Treiberanbieter, Version und Datum in den Geräteeigenschaften notieren.",
+            "Erstes Auftreten mit kürzlichen Windows- oder Treiberupdates vergleichen."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-43",
+      "slug": "device-manager-code-43",
+      "code": "Code 43",
+      "aliases": [
+        "CM_PROB_FAILED_POST_START"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-failed-post-start"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "장치가 문제를 보고함",
+          "summary": "드라이버가 문제를 보고해 Windows가 장치를 중지한 상태다. 코드만으로 고장 부품을 특정할 수 없다.",
+          "checks": [
+            "전체 상태 메시지와 장치 모델을 기록한다.",
+            "외장 장치는 케이블·연결 상태를 눈으로 확인하고 최근 변경을 기록한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device reported a problem",
+          "summary": "A driver reported a problem and Windows stopped the device; the code cannot identify a failed part.",
+          "checks": [
+            "Record the complete status message and device model.",
+            "For an external device, visually inspect its cable/connection and note recent changes."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "El dispositivo comunicó un problema",
+          "summary": "Un controlador comunicó un problema y Windows detuvo el dispositivo; el código no identifica una pieza averiada.",
+          "checks": [
+            "Anota el mensaje completo y el modelo.",
+            "Si es externo, revisa visualmente cable y conexión y anota cambios recientes."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备报告了问题",
+          "summary": "驱动报告问题后 Windows 停止了设备；该代码无法确定具体损坏部件。",
+          "checks": [
+            "记录完整状态信息及设备型号。",
+            "对于外接设备，目视检查线缆和连接并记录近期变更。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "デバイスが問題を報告",
+          "summary": "ドライバーの報告を受けて Windows が停止した状態。コードだけでは故障部品を特定できない。",
+          "checks": [
+            "状態メッセージの全文と型番を記録する。",
+            "外付け機器はケーブルと接続を目視確認し、最近の変更を記録する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Gerät hat ein Problem gemeldet",
+          "summary": "Ein Treiber meldete ein Problem und Windows stoppte das Gerät; der Code benennt kein defektes Bauteil.",
+          "checks": [
+            "Vollständige Statusmeldung und Gerätemodell notieren.",
+            "Bei externen Geräten Kabel und Anschluss äußerlich prüfen und letzte Änderungen notieren."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-45",
+      "slug": "device-manager-code-45",
+      "code": "Code 45",
+      "aliases": [
+        "CM_PROB_PHANTOM"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-phantom"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "현재 연결되지 않은 장치",
+          "summary": "현재 존재하지 않는 장치의 기록에 표시될 수 있다.",
+          "checks": [
+            "숨겨진 장치 표시에서 나온 과거 장치인지 확인한다.",
+            "외장 장치라면 실제 연결 여부와 케이블 외관을 확인한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "Windows 10/11 장치 관리자의 상태 코드."
+        },
+        "en": {
+          "title": "Device is currently absent",
+          "summary": "This can appear on a record for a device that is not currently present.",
+          "checks": [
+            "Check whether the item is an old device shown among hidden devices.",
+            "For an external device, check physical connection and the cable’s visible condition."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device status codes in Windows 10/11 Device Manager."
+        },
+        "es": {
+          "title": "Dispositivo ausente actualmente",
+          "summary": "Puede aparecer en el registro de un dispositivo que ya no está presente.",
+          "checks": [
+            "Comprueba si es un dispositivo antiguo mostrado entre los ocultos.",
+            "Si es externo, revisa la conexión física y el estado visible del cable."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Códigos de estado del Administrador de dispositivos de Windows 10/11."
+        },
+        "zh": {
+          "title": "设备当前不在场",
+          "summary": "此代码可能出现在当前不存在的设备记录中。",
+          "checks": [
+            "检查是否为显示隐藏设备后出现的旧设备记录。",
+            "对于外接设备，检查实际连接和线缆外观。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "Windows 10/11 设备管理器的设备状态代码。"
+        },
+        "ja": {
+          "title": "現在存在しないデバイス",
+          "summary": "現在接続されていない機器の記録に表示されることがある。",
+          "checks": [
+            "非表示のデバイスとして表示された古い記録か確認する。",
+            "外付け機器なら実際の接続とケーブルの外観を確認する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "Windows 10/11 のデバイス マネージャーの状態コード。"
+        },
+        "de": {
+          "title": "Gerät ist derzeit nicht vorhanden",
+          "summary": "Der Code kann bei einem Eintrag eines derzeit nicht vorhandenen Geräts erscheinen.",
+          "checks": [
+            "Prüfen, ob es ein alter Eintrag unter den ausgeblendeten Geräten ist.",
+            "Bei externen Geräten tatsächlichen Anschluss und sichtbaren Kabelzustand prüfen."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Gerätestatuscodes im Geräte-Manager von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "device-manager-code-52",
+      "slug": "device-manager-code-52",
+      "code": "Code 52",
+      "aliases": [
+        "CM_PROB_UNSIGNED_DRIVER"
+      ],
+      "category": "device-manager",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/install/cm-prob-unsigned-driver"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-gb/windows/hardware/drivers/error-codes-in-device-manager-in-windows?nochrome=true"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "드라이버 서명 확인 문제",
+          "summary": "필요한 드라이버의 디지털 서명을 확인하지 못해 시작이 막힌 상태다.",
+          "checks": [
+            "드라이버 공급자·버전과 설치 출처를 기록한다.",
+            "제조사 공식 페이지에서 현재 Windows용 서명된 패키지를 확인한다."
+          ],
+          "escalation": "Microsoft 코드별 안내를 확인한다. 계속되면 기록을 장치 제조사 공식 지원에 전달한다.",
+          "scope": "64비트 Windows 10/11의 장치 관리자 Code 52."
+        },
+        "en": {
+          "title": "Driver signature verification issue",
+          "summary": "The device cannot start because the required driver’s digital signature cannot be verified.",
+          "checks": [
+            "Record the driver provider/version and where its installer came from.",
+            "Check the manufacturer’s official site for a signed package for your Windows version."
+          ],
+          "escalation": "Check the linked Microsoft code guidance; if unresolved, give the observations to the maker’s official support.",
+          "scope": "Device Manager Code 52 on 64-bit Windows 10/11."
+        },
+        "es": {
+          "title": "Problema de firma del controlador",
+          "summary": "El dispositivo no inicia porque no se puede verificar la firma digital del controlador necesario.",
+          "checks": [
+            "Anota proveedor, versión y procedencia del instalador.",
+            "Busca un paquete firmado para tu Windows en el sitio oficial del fabricante."
+          ],
+          "escalation": "Consulta la guía de Microsoft; si persiste, facilita los datos al soporte oficial del fabricante.",
+          "scope": "Code 52 del Administrador de dispositivos en Windows 10/11 de 64 bits."
+        },
+        "zh": {
+          "title": "驱动签名验证问题",
+          "summary": "所需驱动的数字签名无法验证，设备因而不能启动。",
+          "checks": [
+            "记录驱动提供商、版本及安装包来源。",
+            "在厂商官网查找适用于当前 Windows 的已签名驱动包。"
+          ],
+          "escalation": "查看链接中的 Microsoft 代码说明；若仍有问题，将记录提交厂商官方支持。",
+          "scope": "64 位 Windows 10/11 设备管理器的 Code 52。"
+        },
+        "ja": {
+          "title": "ドライバーの署名確認に問題",
+          "summary": "必要なドライバーのデジタル署名を確認できず、起動が止められている。",
+          "checks": [
+            "ドライバーの提供元、版、インストーラーの入手先を記録する。",
+            "メーカー公式サイトで現在の Windows 用の署名済みパッケージを確認する。"
+          ],
+          "escalation": "Microsoft のコード別案内を確認し、続く場合は記録をメーカー公式サポートに渡す。",
+          "scope": "64 ビット Windows 10/11 のデバイス マネージャーの Code 52。"
+        },
+        "de": {
+          "title": "Problem mit der Treibersignatur",
+          "summary": "Das Gerät startet nicht, weil die digitale Signatur des benötigten Treibers nicht geprüft werden kann.",
+          "checks": [
+            "Treiberanbieter, Version und Herkunft des Pakets notieren.",
+            "Auf der Herstellerseite nach einem signierten Paket für diese Windows-Version suchen."
+          ],
+          "escalation": "Die verlinkte Microsoft-Codehilfe prüfen; bei Fortbestehen die Beobachtungen an den Herstellersupport geben.",
+          "scope": "Code 52 im Geräte-Manager unter 64-Bit-Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-80070002",
+      "slug": "update-80070002",
+      "code": "0x80070002",
+      "aliases": [],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업데이트 설치 실패",
+          "summary": "Windows Update의 설치 실패 코드이며 원인을 하나로 단정할 수 없다.",
+          "checks": [
+            "업데이트 기록에서 실패한 KB 번호와 시간을 기록한다.",
+            "설정의 저장소에서 시스템 드라이브 여유 공간과 재시작 대기 표시를 확인한다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10/11의 Windows Update 맥락에 한함."
+        },
+        "en": {
+          "title": "Update installation failed",
+          "summary": "This reports a Windows Update installation failure; it does not identify one certain cause.",
+          "checks": [
+            "Record the failed KB number and time in update history.",
+            "Check system-drive free space in Storage and any pending-restart notice."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Only the Windows Update context on Windows 10/11."
+        },
+        "es": {
+          "title": "Falló la instalación de una actualización",
+          "summary": "Indica un fallo de Windows Update; no determina una causa única.",
+          "checks": [
+            "Anota el número KB y la hora del fallo en el historial.",
+            "Comprueba el espacio de la unidad del sistema y si hay un reinicio pendiente."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Solo el contexto de Windows Update en Windows 10/11."
+        },
+        "zh": {
+          "title": "更新安装失败",
+          "summary": "这是 Windows 更新安装失败代码，不能据此确定唯一原因。",
+          "checks": [
+            "在更新历史中记录失败的 KB 编号和时间。",
+            "在存储设置中检查系统盘剩余空间及是否提示等待重启。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "仅限 Windows 10/11 的 Windows 更新场景。"
+        },
+        "ja": {
+          "title": "更新プログラムのインストール失敗",
+          "summary": "Windows Update の導入失敗を表すが、原因を一つに特定できない。",
+          "checks": [
+            "更新履歴で失敗した KB 番号と時刻を記録する。",
+            "ストレージのシステムドライブ空き容量と再起動待ちの表示を確認する。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10/11 の Windows Update の場合のみ。"
+        },
+        "de": {
+          "title": "Updateinstallation fehlgeschlagen",
+          "summary": "Der Code meldet einen Windows-Update-Installationsfehler, aber keine eindeutige Ursache.",
+          "checks": [
+            "Fehlgeschlagene KB-Nummer und Uhrzeit im Updateverlauf notieren.",
+            "Freien Platz des Systemlaufwerks und einen ausstehenden Neustart prüfen."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Nur Windows Update unter Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-80070005",
+      "slug": "update-80070005",
+      "code": "0x80070005",
+      "aliases": [
+        "E_ACCESSDENIED"
+      ],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070005"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업데이트 접근 거부",
+          "summary": "업데이트 과정에서 필요한 리소스에 접근하지 못했을 수 있다. 대상과 이유는 기록 확인이 필요하다.",
+          "checks": [
+            "실패한 KB 번호와 조직 관리 여부를 기록한다.",
+            "CBS.log 또는 Windows Update 기록에서 같은 코드와 실패 대상을 확인한다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10/11의 Windows Update 맥락에 한함."
+        },
+        "en": {
+          "title": "Update access denied",
+          "summary": "The update may lack access to a required resource; logs are needed to locate the target and reason.",
+          "checks": [
+            "Record the failed KB number and whether the PC is organization-managed.",
+            "Inspect CBS.log or Windows Update records for the same code and failed target."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Only the Windows Update context on Windows 10/11."
+        },
+        "es": {
+          "title": "Acceso denegado al actualizar",
+          "summary": "La actualización puede no acceder a un recurso necesario; los registros deben precisar el destino y el motivo.",
+          "checks": [
+            "Anota el número KB y si el equipo está gestionado por una organización.",
+            "Busca el código y el destino fallido en CBS.log o los registros de Windows Update."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Solo el contexto de Windows Update en Windows 10/11."
+        },
+        "zh": {
+          "title": "更新访问被拒绝",
+          "summary": "更新可能无法访问所需资源；具体对象和原因需查看日志。",
+          "checks": [
+            "记录失败的 KB 编号及电脑是否由组织管理。",
+            "在 CBS.log 或 Windows 更新记录中查找相同代码和失败对象。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "仅限 Windows 10/11 的 Windows 更新场景。"
+        },
+        "ja": {
+          "title": "更新時のアクセス拒否",
+          "summary": "必要なリソースにアクセスできない可能性がある。対象と理由はログで確認する必要がある。",
+          "checks": [
+            "失敗した KB 番号と組織の管理対象かを記録する。",
+            "CBS.log または Windows Update の記録で同じコードと対象を確認する。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10/11 の Windows Update の場合のみ。"
+        },
+        "de": {
+          "title": "Zugriff beim Update verweigert",
+          "summary": "Dem Update fehlt möglicherweise Zugriff auf eine Ressource; Ziel und Grund erfordern Protokollprüfung.",
+          "checks": [
+            "Fehlgeschlagene KB-Nummer und Organisationsverwaltung des PCs notieren.",
+            "CBS.log oder Windows-Update-Aufzeichnungen auf denselben Code und das betroffene Ziel prüfen."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Nur Windows Update unter Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-80072ee2",
+      "slug": "update-80072ee2",
+      "code": "0x80072EE2",
+      "aliases": [
+        "WININET_E_TIMEOUT"
+      ],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업데이트 연결 시간 초과",
+          "summary": "업데이트 검색 중 서버 연결이 시간 안에 완료되지 않은 맥락이다.",
+          "checks": [
+            "네트워크 연결과 회사 VPN·프록시 사용 여부를 확인한다.",
+            "개인 Microsoft 서버인지 조직 WSUS·관리 서버인지 확인해 IT에 알린다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10/11의 Windows Update 맥락에 한함."
+        },
+        "en": {
+          "title": "Update connection timed out",
+          "summary": "In this context, an update scan did not reach its server within the allowed time.",
+          "checks": [
+            "Check network connectivity and whether a work VPN or proxy is in use.",
+            "Identify public Microsoft servers versus organization WSUS/management servers for IT."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Only the Windows Update context on Windows 10/11."
+        },
+        "es": {
+          "title": "Tiempo de conexión agotado",
+          "summary": "En este contexto, la búsqueda de actualizaciones no llegó al servidor a tiempo.",
+          "checks": [
+            "Comprueba la conexión y si se usa una VPN o un proxy de empresa.",
+            "Identifica si se usa Microsoft o un servidor WSUS/de gestión de la organización para informar a TI."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Solo el contexto de Windows Update en Windows 10/11."
+        },
+        "zh": {
+          "title": "更新连接超时",
+          "summary": "在此场景中，更新扫描未能在规定时间内连接服务器。",
+          "checks": [
+            "检查网络连接及是否使用工作 VPN 或代理。",
+            "确认更新源是 Microsoft 公共服务器还是组织的 WSUS 或管理服务器，并告知 IT。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "仅限 Windows 10/11 的 Windows 更新场景。"
+        },
+        "ja": {
+          "title": "更新の接続がタイムアウト",
+          "summary": "この場合、更新の検索でサーバーへの接続が時間内に完了していない。",
+          "checks": [
+            "ネットワーク接続と業務用 VPN・プロキシの使用を確認する。",
+            "Microsoft の公開サーバーか組織の WSUS・管理サーバーかを確認し IT に伝える。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10/11 の Windows Update の場合のみ。"
+        },
+        "de": {
+          "title": "Zeitüberschreitung der Updateverbindung",
+          "summary": "In diesem Kontext erreichte die Updatesuche den Server nicht innerhalb der vorgesehenen Zeit.",
+          "checks": [
+            "Netzwerkverbindung sowie Firmen-VPN oder Proxy prüfen.",
+            "Für die IT klären, ob Microsoft-Server oder organisationsinterne WSUS-/Verwaltungsserver verwendet werden."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Nur Windows Update unter Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-80240020",
+      "slug": "update-80240020",
+      "code": "0x80240020",
+      "aliases": [
+        "WU_E_NO_INTERACTIVE_USER"
+      ],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "사용자 로그인 필요",
+          "summary": "대화형 사용자가 로그인하지 않아 업데이트 작업을 끝내지 못한 맥락이다.",
+          "checks": [
+            "실제 PC에 사용자 세션이 로그인되어 있는지 확인한다.",
+            "로그인 후 업데이트 화면의 현재 상태와 재시작 요청을 확인한다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10/11의 Windows Update 맥락에 한함."
+        },
+        "en": {
+          "title": "User sign-in required",
+          "summary": "The update could not finish because no interactive user was signed in.",
+          "checks": [
+            "Check whether a user session is signed in on the PC.",
+            "After signing in, inspect the current update status and any restart request."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Only the Windows Update context on Windows 10/11."
+        },
+        "es": {
+          "title": "Se requiere iniciar sesión",
+          "summary": "La actualización no terminó porque no había un usuario interactivo con sesión iniciada.",
+          "checks": [
+            "Comprueba si hay una sesión de usuario iniciada en el equipo.",
+            "Tras iniciar sesión, revisa el estado de actualización y las solicitudes de reinicio."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Solo el contexto de Windows Update en Windows 10/11."
+        },
+        "zh": {
+          "title": "需要用户登录",
+          "summary": "没有交互式用户登录，更新操作因此未完成。",
+          "checks": [
+            "检查电脑上是否有已登录的用户会话。",
+            "登录后查看当前更新状态及重启请求。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "仅限 Windows 10/11 的 Windows 更新场景。"
+        },
+        "ja": {
+          "title": "ユーザーのサインインが必要",
+          "summary": "対話型ユーザーがサインインしておらず、更新処理が完了できなかった場合。",
+          "checks": [
+            "PC にユーザーセッションがサインインしているか確認する。",
+            "サインイン後、更新の現在の状態と再起動の要求を確認する。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10/11 の Windows Update の場合のみ。"
+        },
+        "de": {
+          "title": "Benutzeranmeldung erforderlich",
+          "summary": "Das Update wurde nicht abgeschlossen, weil kein interaktiver Benutzer angemeldet war.",
+          "checks": [
+            "Prüfen, ob auf dem PC eine Benutzersitzung angemeldet ist.",
+            "Nach der Anmeldung aktuellen Updatestatus und Neustartanforderung prüfen."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Nur Windows Update unter Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-80242014",
+      "slug": "update-80242014",
+      "code": "0x80242014",
+      "aliases": [
+        "WU_E_UH_POSTREBOOTSTILLPENDING"
+      ],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "재시작 이후 업데이트 작업 대기",
+          "summary": "업데이트의 재시작 이후 처리 단계가 아직 끝나지 않은 상태다.",
+          "checks": [
+            "Windows Update에 재시작 요청이 있는지 확인한다.",
+            "작업 저장 후 정상 재시작하고 업데이트 기록의 결과를 다시 확인한다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10/11의 Windows Update 맥락에 한함."
+        },
+        "en": {
+          "title": "Post-restart update work pending",
+          "summary": "The update’s work after restart has not finished yet.",
+          "checks": [
+            "Check whether Windows Update requests a restart.",
+            "Save work, restart normally and recheck the result in update history."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Only the Windows Update context on Windows 10/11."
+        },
+        "es": {
+          "title": "Pendiente el trabajo tras reiniciar",
+          "summary": "La fase de actualización posterior al reinicio aún no ha terminado.",
+          "checks": [
+            "Comprueba si Windows Update solicita reiniciar.",
+            "Guarda el trabajo, reinicia normalmente y revisa el resultado en el historial."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Solo el contexto de Windows Update en Windows 10/11."
+        },
+        "zh": {
+          "title": "重启后更新工作待完成",
+          "summary": "更新在重启后的处理阶段尚未结束。",
+          "checks": [
+            "检查 Windows 更新是否请求重启。",
+            "保存工作，正常重启后再次查看更新历史中的结果。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "仅限 Windows 10/11 的 Windows 更新场景。"
+        },
+        "ja": {
+          "title": "再起動後の更新処理が未完了",
+          "summary": "更新の再起動後の処理がまだ完了していない状態。",
+          "checks": [
+            "Windows Update に再起動の要求があるか確認する。",
+            "作業を保存して通常の再起動を行い、更新履歴の結果を再確認する。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10/11 の Windows Update の場合のみ。"
+        },
+        "de": {
+          "title": "Updatearbeit nach Neustart ausstehend",
+          "summary": "Die Updateverarbeitung nach dem Neustart ist noch nicht abgeschlossen.",
+          "checks": [
+            "Prüfen, ob Windows Update einen Neustart verlangt.",
+            "Arbeit speichern, normal neu starten und das Ergebnis im Updateverlauf erneut prüfen."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Nur Windows Update unter Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "update-800f081f",
+      "slug": "update-800f081f",
+      "code": "0x800F081F",
+      "aliases": [],
+      "category": "windows-update",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10 — Windows Update"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/troubleshoot-problems-updating-windows"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업데이트에 필요한 파일 문제",
+          "summary": "Windows 10 업데이트에서는 필요한 시스템 파일이나 다운로드 상태를 확인해야 할 수 있다.",
+          "checks": [
+            "실패한 KB 번호와 다운로드·설치 중 어느 단계인지 기록한다.",
+            "재시작 대기와 시스템 드라이브 여유 공간을 확인한다."
+          ],
+          "escalation": "Microsoft 업데이트 안내로 진행한다. 반복되면 KB 번호와 기록을 Microsoft 지원 또는 조직 IT에 전달한다.",
+          "scope": "Windows 10의 Windows Update 맥락. .NET Framework 기능 설치 항목과 구별."
+        },
+        "en": {
+          "title": "Files needed for the update",
+          "summary": "For Windows 10 updates, required system files or download state may need investigation.",
+          "checks": [
+            "Record the failed KB number and whether failure occurred during download or installation.",
+            "Check for a pending restart and available system-drive space."
+          ],
+          "escalation": "Use the linked Microsoft update guidance; for repeat failures, give the KB number and record to Microsoft Support or IT.",
+          "scope": "Windows Update on Windows 10; separate from the .NET Framework feature-installation entry."
+        },
+        "es": {
+          "title": "Archivos necesarios para actualizar",
+          "summary": "En Windows 10 puede requerir revisar archivos del sistema o el estado de descarga.",
+          "checks": [
+            "Anota el número KB y si falló la descarga o la instalación.",
+            "Comprueba si hay reinicio pendiente y espacio disponible en la unidad del sistema."
+          ],
+          "escalation": "Sigue la guía de Microsoft; si se repite, facilita el número KB y el registro al soporte de Microsoft o a TI.",
+          "scope": "Windows Update en Windows 10; distinto de la instalación de la característica .NET Framework."
+        },
+        "zh": {
+          "title": "更新所需文件问题",
+          "summary": "在 Windows 10 更新中，可能需要检查必要系统文件或下载状态。",
+          "checks": [
+            "记录失败的 KB 编号，以及失败发生在下载还是安装阶段。",
+            "检查是否等待重启及系统盘剩余空间。"
+          ],
+          "escalation": "按 Microsoft 更新说明继续；若反复失败，将 KB 编号和记录交给 Microsoft 支持或组织 IT。",
+          "scope": "Windows 10 的 Windows 更新场景；与 .NET Framework 功能安装条目区分。"
+        },
+        "ja": {
+          "title": "更新に必要なファイルの問題",
+          "summary": "Windows 10 の更新では、必要なシステムファイルやダウンロード状態の確認が必要な場合がある。",
+          "checks": [
+            "失敗した KB 番号と、ダウンロード中か導入中かを記録する。",
+            "再起動待ちとシステムドライブの空き容量を確認する。"
+          ],
+          "escalation": "Microsoft の更新案内に進み、繰り返す場合は KB 番号と記録を Microsoft サポートまたは IT に渡す。",
+          "scope": "Windows 10 の Windows Update。.NET Framework 機能導入の項目とは区別する。"
+        },
+        "de": {
+          "title": "Benötigte Updatedateien prüfen",
+          "summary": "Bei Windows-10-Updates können Systemdateien oder der Downloadzustand eine Prüfung erfordern.",
+          "checks": [
+            "KB-Nummer und Fehlerphase beim Download oder Installieren notieren.",
+            "Ausstehenden Neustart und freien Platz auf dem Systemlaufwerk prüfen."
+          ],
+          "escalation": "Microsofts Updatehilfe nutzen; bei Wiederholung KB-Nummer und Protokoll an Microsoft Support oder die IT geben.",
+          "scope": "Windows Update unter Windows 10; getrennt vom Eintrag zur Installation des .NET-Framework-Features."
+        }
+      }
+    },
+    {
+      "id": "netfx35-800f081f",
+      "slug": "netfx35-800f081f",
+      "code": "0x800F081F",
+      "aliases": [
+        "CBS_E_SOURCE_MISSING"
+      ],
+      "category": "optional-feature",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10 — .NET Framework 3.5",
+        "Windows Server — .NET Framework 3.5"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-client/application-management/dotnet-framework-35-installation-error"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": ".NET Framework 3.5 원본 확인",
+          "summary": "기능 설치용 원본을 찾거나 읽지 못했거나 Windows 버전과 맞지 않을 수 있다.",
+          "checks": [
+            "영향받은 PC에서 지정된 원본 위치를 열어 읽을 수 있는지 확인한다.",
+            "원본의 Windows 버전과 필요한 기능 파일의 포함 여부를 확인한다."
+          ],
+          "escalation": "Microsoft의 .NET Framework 3.5 원본 안내를 확인하고, 조직 IT에 설치 원본과 정책 검토를 요청한다.",
+          "scope": "Windows 10 및 Windows Server의 .NET Framework 3.5 기능 설치. 일반 .NET 앱 오류는 제외."
+        },
+        "en": {
+          "title": ".NET Framework 3.5 source check",
+          "summary": "The feature source may be absent, unreadable or unsuitable for the Windows version.",
+          "checks": [
+            "Check whether the affected PC can open and read the specified source location.",
+            "Verify the source’s Windows version and presence of the required feature files."
+          ],
+          "escalation": "Use Microsoft’s .NET Framework 3.5 source guidance and ask IT to review the installation source and policy.",
+          "scope": "Installing the .NET Framework 3.5 feature on Windows 10 or Windows Server; not general .NET app errors."
+        },
+        "es": {
+          "title": "Revisar el origen de .NET Framework 3.5",
+          "summary": "El origen de la característica puede faltar, ser ilegible o no corresponder a la versión de Windows.",
+          "checks": [
+            "Comprueba si el equipo afectado puede abrir y leer la ubicación indicada.",
+            "Verifica la versión de Windows del origen y la presencia de los archivos necesarios."
+          ],
+          "escalation": "Consulta la guía de origen de .NET Framework 3.5 y pide a TI revisar el origen y la directiva.",
+          "scope": "Instalación de .NET Framework 3.5 en Windows 10 o Windows Server; no errores generales de aplicaciones .NET."
+        },
+        "zh": {
+          "title": ".NET Framework 3.5 安装源检查",
+          "summary": "功能安装源可能缺失、不可读或不匹配 Windows 版本。",
+          "checks": [
+            "确认受影响电脑能否打开并读取指定安装源位置。",
+            "核对安装源的 Windows 版本及是否包含所需功能文件。"
+          ],
+          "escalation": "查看 Microsoft 的 .NET Framework 3.5 安装源说明，并请 IT 检查安装源和策略。",
+          "scope": "Windows 10 或 Windows Server 安装 .NET Framework 3.5 功能；不适用于普通 .NET 应用错误。"
+        },
+        "ja": {
+          "title": ".NET Framework 3.5 のソース確認",
+          "summary": "機能のソースが存在しない、読み取れない、または Windows の版と合わない可能性がある。",
+          "checks": [
+            "対象 PC から指定されたソースの場所を開き、読めるか確認する。",
+            "ソースの Windows の版と必要な機能ファイルの有無を確認する。"
+          ],
+          "escalation": "Microsoft の .NET Framework 3.5 ソース案内を確認し、IT にインストール元とポリシーの確認を依頼する。",
+          "scope": "Windows 10 または Windows Server の .NET Framework 3.5 機能の導入。通常の .NET アプリのエラーは対象外。"
+        },
+        "de": {
+          "title": ".NET-Framework-3.5-Quelle prüfen",
+          "summary": "Die Featurequelle kann fehlen, unlesbar sein oder nicht zur Windows-Version passen.",
+          "checks": [
+            "Prüfen, ob der betroffene PC den angegebenen Quellort öffnen und lesen kann.",
+            "Windows-Version der Quelle und Vorhandensein der benötigten Featuredateien prüfen."
+          ],
+          "escalation": "Microsofts Hinweise zur .NET-Framework-3.5-Quelle nutzen und die IT um Prüfung von Quelle und Richtlinie bitten.",
+          "scope": "Installation des Features .NET Framework 3.5 unter Windows 10 oder Windows Server; keine allgemeinen .NET-App-Fehler."
+        }
+      }
+    },
+    {
+      "id": "activation-803f7001",
+      "slug": "activation-803f7001",
+      "code": "0x803F7001",
+      "aliases": [
+        "0x803f7001"
+      ],
+      "category": "activation",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/get-help-with-windows-activation-errors"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/fix-windows-10-activation-error-0x803f7001"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "유효한 인증 정보 확인 필요",
+          "summary": "이 장치의 인증에 사용할 유효한 Windows 라이선스를 찾지 못한 상태다.",
+          "checks": [
+            "정품 인증 설정에서 설치 에디션과 현재 메시지를 확인한다.",
+            "구매 증빙의 에디션과 재설치·메인보드 변경 이력을 비교한다."
+          ],
+          "escalation": "Microsoft 인증 안내를 확인한다. 조직 라이선스는 IT, 사전설치 제품은 제조사, 그 외는 Microsoft 지원에 문의한다.",
+          "scope": "Windows 10/11 정품 인증. 라이선스 이전 가능 여부는 개별 조건에 따름."
+        },
+        "en": {
+          "title": "Valid activation information needed",
+          "summary": "Windows could not find a valid license to activate this device.",
+          "checks": [
+            "Check the installed edition and current message in Activation settings.",
+            "Compare the purchase edition with any reinstall or motherboard-change history."
+          ],
+          "escalation": "Consult Microsoft’s activation guidance; contact IT for organization licenses, the maker for preinstalled Windows, or Microsoft Support otherwise.",
+          "scope": "Windows 10/11 activation; license transfer depends on individual license terms."
+        },
+        "es": {
+          "title": "Falta información válida de activación",
+          "summary": "Windows no encontró una licencia válida para activar este dispositivo.",
+          "checks": [
+            "Revisa la edición instalada y el mensaje en Activación.",
+            "Compara la edición comprada con reinstalaciones o cambios de placa base."
+          ],
+          "escalation": "Consulta la guía de activación; acude a TI para licencias de empresa, al fabricante para Windows preinstalado o al soporte de Microsoft.",
+          "scope": "Activación de Windows 10/11; la transferencia depende de cada licencia."
+        },
+        "zh": {
+          "title": "需要有效激活信息",
+          "summary": "Windows 未找到可用于激活此设备的有效许可证。",
+          "checks": [
+            "在激活设置中查看已安装版本及当前信息。",
+            "比较购买凭证中的版本，并核对重装或主板更换记录。"
+          ],
+          "escalation": "查看 Microsoft 激活说明；组织许可联系 IT，预装版联系厂商，其他情况联系 Microsoft 支持。",
+          "scope": "Windows 10/11 激活；许可证能否转移取决于具体许可条件。"
+        },
+        "ja": {
+          "title": "有効な認証情報の確認が必要",
+          "summary": "このデバイスを認証できる有効な Windows ライセンスが見つかっていない。",
+          "checks": [
+            "認証設定で導入済みエディションと現在のメッセージを確認する。",
+            "購入したエディションと再導入・マザーボード交換の履歴を照合する。"
+          ],
+          "escalation": "Microsoft の認証案内を確認し、組織のライセンスは IT、プリインストール版はメーカー、それ以外は Microsoft サポートに相談する。",
+          "scope": "Windows 10/11 の認証。移行可否は各ライセンスの条件による。"
+        },
+        "de": {
+          "title": "Gültige Aktivierungsinformationen fehlen",
+          "summary": "Windows fand keine gültige Lizenz zur Aktivierung dieses Geräts.",
+          "checks": [
+            "Installierte Edition und aktuelle Meldung in den Aktivierungseinstellungen prüfen.",
+            "Gekaufte Edition mit Neuinstallation oder Mainboardwechsel abgleichen."
+          ],
+          "escalation": "Microsofts Aktivierungshilfe prüfen; bei Organisationslizenzen die IT, bei vorinstalliertem Windows den Hersteller, sonst Microsoft Support kontaktieren.",
+          "scope": "Aktivierung von Windows 10/11; Übertragbarkeit je nach Lizenzbedingungen."
+        }
+      }
+    },
+    {
+      "id": "activation-c004f074",
+      "slug": "activation-c004f074",
+      "code": "0xC004F074",
+      "aliases": [],
+      "category": "activation",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/get-help-with-windows-activation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "조직 인증 연결 확인",
+          "summary": "조직 인증 서버 연결 또는 사용 중인 에디션·키의 맥락을 확인해야 할 수 있다.",
+          "checks": [
+            "이 PC가 회사·학교 라이선스로 관리되는지 확인한다.",
+            "IT가 지정한 회사 네트워크·VPN 연결과 설치 에디션을 확인한다."
+          ],
+          "escalation": "Microsoft 인증 안내를 확인한다. 조직 라이선스는 IT, 사전설치 제품은 제조사, 그 외는 Microsoft 지원에 문의한다.",
+          "scope": "Windows 10/11 정품 인증. 라이선스 이전 가능 여부는 개별 조건에 따름."
+        },
+        "en": {
+          "title": "Check organization activation access",
+          "summary": "Organization-server connectivity or the edition/key context may need investigation.",
+          "checks": [
+            "Check whether a work or school license manages this PC.",
+            "Check the installed edition and the corporate network/VPN specified by IT."
+          ],
+          "escalation": "Consult Microsoft’s activation guidance; contact IT for organization licenses, the maker for preinstalled Windows, or Microsoft Support otherwise.",
+          "scope": "Windows 10/11 activation; license transfer depends on individual license terms."
+        },
+        "es": {
+          "title": "Revisar la activación de la organización",
+          "summary": "Puede requerir revisar la conexión al servidor de la organización o la edición y clave utilizadas.",
+          "checks": [
+            "Comprueba si el equipo usa una licencia de empresa o centro educativo.",
+            "Revisa la edición y la red/VPN corporativa indicada por TI."
+          ],
+          "escalation": "Consulta la guía de activación; acude a TI para licencias de empresa, al fabricante para Windows preinstalado o al soporte de Microsoft.",
+          "scope": "Activación de Windows 10/11; la transferencia depende de cada licencia."
+        },
+        "zh": {
+          "title": "检查组织激活连接",
+          "summary": "可能需要检查组织激活服务器连接，或所用版本与密钥的场景。",
+          "checks": [
+            "确认电脑是否由公司或学校许可证管理。",
+            "检查已安装版本以及 IT 指定的公司网络或 VPN 连接。"
+          ],
+          "escalation": "查看 Microsoft 激活说明；组织许可联系 IT，预装版联系厂商，其他情况联系 Microsoft 支持。",
+          "scope": "Windows 10/11 激活；许可证能否转移取决于具体许可条件。"
+        },
+        "ja": {
+          "title": "組織の認証への接続確認",
+          "summary": "組織の認証サーバーへの接続や、エディション・キーの状況の確認が必要な場合がある。",
+          "checks": [
+            "会社・学校のライセンスで管理される PC か確認する。",
+            "導入済みエディションと IT 指定の社内ネットワーク・VPN を確認する。"
+          ],
+          "escalation": "Microsoft の認証案内を確認し、組織のライセンスは IT、プリインストール版はメーカー、それ以外は Microsoft サポートに相談する。",
+          "scope": "Windows 10/11 の認証。移行可否は各ライセンスの条件による。"
+        },
+        "de": {
+          "title": "Organisationsaktivierung prüfen",
+          "summary": "Die Verbindung zum Organisationsserver oder der Kontext von Edition und Schlüssel kann Prüfung erfordern.",
+          "checks": [
+            "Prüfen, ob der PC eine Firmen- oder Schullizenz nutzt.",
+            "Installierte Edition und das von der IT vorgegebene Firmennetz/VPN prüfen."
+          ],
+          "escalation": "Microsofts Aktivierungshilfe prüfen; bei Organisationslizenzen die IT, bei vorinstalliertem Windows den Hersteller, sonst Microsoft Support kontaktieren.",
+          "scope": "Aktivierung von Windows 10/11; Übertragbarkeit je nach Lizenzbedingungen."
+        }
+      }
+    },
+    {
+      "id": "activation-c004c003",
+      "slug": "activation-c004c003",
+      "code": "0xC004C003",
+      "aliases": [],
+      "category": "activation",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/get-help-with-windows-activation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "제품 키 유효성 확인",
+          "summary": "제공한 제품 키가 이 인증 요청에 유효하지 않은 것으로 처리되었을 수 있다.",
+          "checks": [
+            "정품 인증 화면의 전체 메시지와 설치 에디션을 기록한다.",
+            "새 PC·재판매 제품·수리 후 발생인지와 구매 증빙을 확인한다."
+          ],
+          "escalation": "Microsoft 인증 안내를 확인한다. 조직 라이선스는 IT, 사전설치 제품은 제조사, 그 외는 Microsoft 지원에 문의한다.",
+          "scope": "Windows 10/11 정품 인증. 라이선스 이전 가능 여부는 개별 조건에 따름."
+        },
+        "en": {
+          "title": "Check product key validity",
+          "summary": "The supplied key may have been treated as invalid for this activation request.",
+          "checks": [
+            "Record the complete Activation message and installed edition.",
+            "Check purchase evidence and whether this followed a new PC, resale or repair."
+          ],
+          "escalation": "Consult Microsoft’s activation guidance; contact IT for organization licenses, the maker for preinstalled Windows, or Microsoft Support otherwise.",
+          "scope": "Windows 10/11 activation; license transfer depends on individual license terms."
+        },
+        "es": {
+          "title": "Revisar la validez de la clave",
+          "summary": "La clave indicada puede haberse considerado no válida para esta solicitud.",
+          "checks": [
+            "Anota el mensaje completo de Activación y la edición instalada.",
+            "Revisa la compra y si ocurrió en un equipo nuevo, revendido o reparado."
+          ],
+          "escalation": "Consulta la guía de activación; acude a TI para licencias de empresa, al fabricante para Windows preinstalado o al soporte de Microsoft.",
+          "scope": "Activación de Windows 10/11; la transferencia depende de cada licencia."
+        },
+        "zh": {
+          "title": "检查产品密钥有效性",
+          "summary": "提供的密钥可能在此次激活请求中被判为无效。",
+          "checks": [
+            "记录激活页面的完整信息及已安装版本。",
+            "核对购买凭证，并确认是否发生于新机、转售电脑或维修之后。"
+          ],
+          "escalation": "查看 Microsoft 激活说明；组织许可联系 IT，预装版联系厂商，其他情况联系 Microsoft 支持。",
+          "scope": "Windows 10/11 激活；许可证能否转移取决于具体许可条件。"
+        },
+        "ja": {
+          "title": "プロダクトキーの有効性を確認",
+          "summary": "入力したキーが今回の認証で無効と扱われた可能性がある。",
+          "checks": [
+            "認証画面の全文と導入済みエディションを記録する。",
+            "購入証明と、新品・再販売品・修理後のどの状況かを確認する。"
+          ],
+          "escalation": "Microsoft の認証案内を確認し、組織のライセンスは IT、プリインストール版はメーカー、それ以外は Microsoft サポートに相談する。",
+          "scope": "Windows 10/11 の認証。移行可否は各ライセンスの条件による。"
+        },
+        "de": {
+          "title": "Gültigkeit des Produktschlüssels prüfen",
+          "summary": "Der angegebene Schlüssel wurde für diese Aktivierungsanfrage möglicherweise als ungültig behandelt.",
+          "checks": [
+            "Vollständige Aktivierungsmeldung und installierte Edition notieren.",
+            "Kaufbeleg prüfen und klären, ob Neukauf, Weiterverkauf oder Reparatur vorausging."
+          ],
+          "escalation": "Microsofts Aktivierungshilfe prüfen; bei Organisationslizenzen die IT, bei vorinstalliertem Windows den Hersteller, sonst Microsoft Support kontaktieren.",
+          "scope": "Aktivierung von Windows 10/11; Übertragbarkeit je nach Lizenzbedingungen."
+        }
+      }
+    },
+    {
+      "id": "activation-c004f211",
+      "slug": "activation-c004f211",
+      "code": "0xC004F211",
+      "aliases": [],
+      "category": "activation",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/get-help-with-windows-activation-errors"
+        },
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/reactivating-windows-after-a-hardware-change"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "하드웨어 변경 후 인증",
+          "summary": "Windows가 장치 하드웨어 변경을 보고한 인증 맥락이다.",
+          "checks": [
+            "메인보드 교체·수리 시점과 설치 에디션을 확인한다.",
+            "변경 전에 라이선스와 연결했던 Microsoft 계정인지 확인한다."
+          ],
+          "escalation": "Microsoft 인증 안내를 확인한다. 조직 라이선스는 IT, 사전설치 제품은 제조사, 그 외는 Microsoft 지원에 문의한다.",
+          "scope": "Windows 10/11 정품 인증. 라이선스 이전 가능 여부는 개별 조건에 따름."
+        },
+        "en": {
+          "title": "Activation after hardware change",
+          "summary": "Windows reported changed device hardware in the activation context.",
+          "checks": [
+            "Check the motherboard replacement/repair date and installed edition.",
+            "Check whether this is the Microsoft account linked to the license before the change."
+          ],
+          "escalation": "Consult Microsoft’s activation guidance; contact IT for organization licenses, the maker for preinstalled Windows, or Microsoft Support otherwise.",
+          "scope": "Windows 10/11 activation; license transfer depends on individual license terms."
+        },
+        "es": {
+          "title": "Activación tras cambiar hardware",
+          "summary": "Windows comunicó un cambio de hardware al intentar activar.",
+          "checks": [
+            "Comprueba la fecha de reparación/cambio de placa y la edición instalada.",
+            "Verifica si la cuenta Microsoft estaba vinculada a la licencia antes del cambio."
+          ],
+          "escalation": "Consulta la guía de activación; acude a TI para licencias de empresa, al fabricante para Windows preinstalado o al soporte de Microsoft.",
+          "scope": "Activación de Windows 10/11; la transferencia depende de cada licencia."
+        },
+        "zh": {
+          "title": "硬件变更后的激活",
+          "summary": "在激活场景中，Windows 报告设备硬件已发生变化。",
+          "checks": [
+            "核对主板更换或维修时间及已安装版本。",
+            "确认是否使用变更前与许可证关联的 Microsoft 账户。"
+          ],
+          "escalation": "查看 Microsoft 激活说明；组织许可联系 IT，预装版联系厂商，其他情况联系 Microsoft 支持。",
+          "scope": "Windows 10/11 激活；许可证能否转移取决于具体许可条件。"
+        },
+        "ja": {
+          "title": "ハードウェア変更後の認証",
+          "summary": "認証時に Windows がハードウェア変更を報告している。",
+          "checks": [
+            "マザーボード交換・修理の時期と導入済みエディションを確認する。",
+            "変更前にライセンスと紐付けた Microsoft アカウントか確認する。"
+          ],
+          "escalation": "Microsoft の認証案内を確認し、組織のライセンスは IT、プリインストール版はメーカー、それ以外は Microsoft サポートに相談する。",
+          "scope": "Windows 10/11 の認証。移行可否は各ライセンスの条件による。"
+        },
+        "de": {
+          "title": "Aktivierung nach Hardwareänderung",
+          "summary": "Windows meldete im Aktivierungskontext geänderte Gerätehardware.",
+          "checks": [
+            "Datum von Mainboardwechsel/Reparatur und installierte Edition prüfen.",
+            "Prüfen, ob dieses Microsoft-Konto vor der Änderung mit der Lizenz verknüpft war."
+          ],
+          "escalation": "Microsofts Aktivierungshilfe prüfen; bei Organisationslizenzen die IT, bei vorinstalliertem Windows den Hersteller, sonst Microsoft Support kontaktieren.",
+          "scope": "Aktivierung von Windows 10/11; Übertragbarkeit je nach Lizenzbedingungen."
+        }
+      }
+    },
+    {
+      "id": "activation-c004f212",
+      "slug": "activation-c004f212",
+      "code": "0xC004F212",
+      "aliases": [],
+      "category": "activation",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/activation/get-help-with-windows-activation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "에디션과 인증 키 불일치",
+          "summary": "사용한 제품 키와 설치된 Windows 에디션이 맞지 않은 인증 맥락이다.",
+          "checks": [
+            "설정에서 Home·Pro 등 설치 에디션을 확인한다.",
+            "구매 내역 또는 기존 디지털 라이선스의 에디션과 비교한다."
+          ],
+          "escalation": "Microsoft 인증 안내를 확인한다. 조직 라이선스는 IT, 사전설치 제품은 제조사, 그 외는 Microsoft 지원에 문의한다.",
+          "scope": "Windows 10/11 정품 인증. 라이선스 이전 가능 여부는 개별 조건에 따름."
+        },
+        "en": {
+          "title": "Edition and activation key mismatch",
+          "summary": "The product key does not match the installed Windows edition in this context.",
+          "checks": [
+            "Check the installed edition, such as Home or Pro, in Settings.",
+            "Compare it with the purchased edition or previous digital license."
+          ],
+          "escalation": "Consult Microsoft’s activation guidance; contact IT for organization licenses, the maker for preinstalled Windows, or Microsoft Support otherwise.",
+          "scope": "Windows 10/11 activation; license transfer depends on individual license terms."
+        },
+        "es": {
+          "title": "La edición y la clave no coinciden",
+          "summary": "La clave de producto no corresponde a la edición de Windows instalada.",
+          "checks": [
+            "Revisa en Configuración la edición instalada, como Home o Pro.",
+            "Compárala con la edición comprada o la licencia digital anterior."
+          ],
+          "escalation": "Consulta la guía de activación; acude a TI para licencias de empresa, al fabricante para Windows preinstalado o al soporte de Microsoft.",
+          "scope": "Activación de Windows 10/11; la transferencia depende de cada licencia."
+        },
+        "zh": {
+          "title": "版本与激活密钥不匹配",
+          "summary": "在此场景中，产品密钥与已安装的 Windows 版本不匹配。",
+          "checks": [
+            "在设置中确认 Home、Pro 等已安装版本。",
+            "与购买记录或原有数字许可证的版本比较。"
+          ],
+          "escalation": "查看 Microsoft 激活说明；组织许可联系 IT，预装版联系厂商，其他情况联系 Microsoft 支持。",
+          "scope": "Windows 10/11 激活；许可证能否转移取决于具体许可条件。"
+        },
+        "ja": {
+          "title": "エディションと認証キーの不一致",
+          "summary": "使用したキーが導入済み Windows のエディションと合わない場合。",
+          "checks": [
+            "設定で Home・Pro などの導入済みエディションを確認する。",
+            "購入履歴または以前のデジタルライセンスのエディションと比較する。"
+          ],
+          "escalation": "Microsoft の認証案内を確認し、組織のライセンスは IT、プリインストール版はメーカー、それ以外は Microsoft サポートに相談する。",
+          "scope": "Windows 10/11 の認証。移行可否は各ライセンスの条件による。"
+        },
+        "de": {
+          "title": "Edition und Aktivierungsschlüssel passen nicht",
+          "summary": "Der Produktschlüssel passt in diesem Kontext nicht zur installierten Windows-Edition.",
+          "checks": [
+            "Installierte Edition wie Home oder Pro in den Einstellungen prüfen.",
+            "Mit der gekauften Edition oder früheren digitalen Lizenz vergleichen."
+          ],
+          "escalation": "Microsofts Aktivierungshilfe prüfen; bei Organisationslizenzen die IT, bei vorinstalliertem Windows den Hersteller, sonst Microsoft Support kontaktieren.",
+          "scope": "Aktivierung von Windows 10/11; Übertragbarkeit je nach Lizenzbedingungen."
+        }
+      }
+    },
+    {
+      "id": "setup-c1900101",
+      "slug": "setup-c1900101",
+      "code": "0xC1900101",
+      "aliases": [],
+      "category": "windows-setup",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/get-help-with-windows-upgrade-and-installation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업그레이드 드라이버 관련 오류군",
+          "summary": "드라이버 관련 문제에서 자주 보이는 코드군이며 추가 코드와 단계가 중요하다.",
+          "checks": [
+            "0x20017 같은 뒤쪽 코드와 실패 단계를 함께 기록한다.",
+            "장치 관리자 경고와 최근 추가한 장치·드라이버를 확인한다."
+          ],
+          "escalation": "Microsoft 설치 안내에서 전체 코드를 확인한다. 반복되면 코드·설치 단계·PC 모델을 Microsoft 지원에 전달한다.",
+          "scope": "Windows 10/11 설치·버전 업그레이드 중 표시된 코드."
+        },
+        "en": {
+          "title": "Driver-related upgrade error family",
+          "summary": "This family often accompanies driver issues; the additional code and phase matter.",
+          "checks": [
+            "Record the trailing code, such as 0x20017, together with the failed phase.",
+            "Check Device Manager warnings and recently added devices or drivers."
+          ],
+          "escalation": "Look up the full code in Microsoft’s setup guidance; if repeated, send the code, setup phase and PC model to Microsoft Support.",
+          "scope": "Codes displayed during Windows 10/11 setup or a version upgrade."
+        },
+        "es": {
+          "title": "Familia de errores de controlador al actualizar",
+          "summary": "Suele acompañar problemas de controladores; importan el código adicional y la fase.",
+          "checks": [
+            "Anota el código final, como 0x20017, y la fase del fallo.",
+            "Revisa avisos del Administrador de dispositivos y dispositivos/controladores añadidos recientemente."
+          ],
+          "escalation": "Consulta el código completo en la guía de Microsoft; si se repite, envía código, fase y modelo al soporte de Microsoft.",
+          "scope": "Códigos durante la instalación o actualización de versión de Windows 10/11."
+        },
+        "zh": {
+          "title": "升级驱动相关错误系列",
+          "summary": "此系列常与驱动问题有关；附加代码及阶段很重要。",
+          "checks": [
+            "同时记录 0x20017 等后续代码及失败阶段。",
+            "检查设备管理器警告及近期新增的设备或驱动。"
+          ],
+          "escalation": "在 Microsoft 安装说明中核对完整代码；若再次出现，向 Microsoft 支持提供代码、阶段和电脑型号。",
+          "scope": "Windows 10/11 安装或版本升级中显示的代码。"
+        },
+        "ja": {
+          "title": "アップグレード時のドライバー関連エラー群",
+          "summary": "ドライバーの問題でよく見られるコード群。追加コードと段階が重要。",
+          "checks": [
+            "0x20017 などの後続コードと失敗した段階を記録する。",
+            "デバイス マネージャーの警告と最近追加した機器・ドライバーを確認する。"
+          ],
+          "escalation": "Microsoft のセットアップ案内で完全なコードを確認し、繰り返す場合はコード、段階、PC 型番をサポートに伝える。",
+          "scope": "Windows 10/11 のセットアップまたはバージョンアップ中のコード。"
+        },
+        "de": {
+          "title": "Treiberbezogene Upgradefehlergruppe",
+          "summary": "Diese Gruppe begleitet häufig Treiberprobleme; Zusatzcode und Phase sind wichtig.",
+          "checks": [
+            "Nachfolgenden Code wie 0x20017 und Fehlerphase gemeinsam notieren.",
+            "Warnungen im Geräte-Manager sowie kürzlich hinzugefügte Geräte und Treiber prüfen."
+          ],
+          "escalation": "Den vollständigen Code in Microsofts Installationshilfe prüfen; bei Wiederholung Code, Phase und PC-Modell an Microsoft Support geben.",
+          "scope": "Codes bei Installation oder Versionsupgrade von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "setup-c1900208-4000c",
+      "slug": "setup-c1900208-4000c",
+      "code": "0xC1900208 – 0x4000C",
+      "aliases": [
+        "0xC1900208 - 0x4000C"
+      ],
+      "category": "windows-setup",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/get-help-with-windows-upgrade-and-installation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업그레이드를 막는 앱 확인",
+          "summary": "설치된 앱의 호환성 문제로 업그레이드가 멈췄을 수 있다.",
+          "checks": [
+            "설치 화면에서 지목한 앱 이름과 버전을 기록한다.",
+            "앱 제조사 공식 사이트에서 대상 Windows 버전의 지원 여부를 확인한다."
+          ],
+          "escalation": "Microsoft 설치 안내에서 전체 코드를 확인한다. 반복되면 코드·설치 단계·PC 모델을 Microsoft 지원에 전달한다.",
+          "scope": "Windows 10/11 설치·버전 업그레이드 중 표시된 코드."
+        },
+        "en": {
+          "title": "Check an app blocking the upgrade",
+          "summary": "An installed app’s compatibility may be blocking the upgrade.",
+          "checks": [
+            "Record the app name and version identified by Setup.",
+            "Check the app publisher’s official support for the target Windows version."
+          ],
+          "escalation": "Look up the full code in Microsoft’s setup guidance; if repeated, send the code, setup phase and PC model to Microsoft Support.",
+          "scope": "Codes displayed during Windows 10/11 setup or a version upgrade."
+        },
+        "es": {
+          "title": "Revisar una aplicación que bloquea el cambio",
+          "summary": "La compatibilidad de una aplicación instalada puede impedir la actualización.",
+          "checks": [
+            "Anota el nombre y versión que señala el instalador.",
+            "Consulta al editor oficial si admite la versión de Windows de destino."
+          ],
+          "escalation": "Consulta el código completo en la guía de Microsoft; si se repite, envía código, fase y modelo al soporte de Microsoft.",
+          "scope": "Códigos durante la instalación o actualización de versión de Windows 10/11."
+        },
+        "zh": {
+          "title": "检查阻止升级的应用",
+          "summary": "已安装应用的兼容性问题可能阻止升级。",
+          "checks": [
+            "记录安装程序指出的应用名称和版本。",
+            "在应用发布者官网核对是否支持目标 Windows 版本。"
+          ],
+          "escalation": "在 Microsoft 安装说明中核对完整代码；若再次出现，向 Microsoft 支持提供代码、阶段和电脑型号。",
+          "scope": "Windows 10/11 安装或版本升级中显示的代码。"
+        },
+        "ja": {
+          "title": "アップグレードを妨げるアプリの確認",
+          "summary": "導入済みアプリの互換性がアップグレードを妨げている可能性がある。",
+          "checks": [
+            "セットアップが示したアプリ名と版を記録する。",
+            "アプリ提供元の公式サイトで対象 Windows 版の対応状況を確認する。"
+          ],
+          "escalation": "Microsoft のセットアップ案内で完全なコードを確認し、繰り返す場合はコード、段階、PC 型番をサポートに伝える。",
+          "scope": "Windows 10/11 のセットアップまたはバージョンアップ中のコード。"
+        },
+        "de": {
+          "title": "Upgrade blockierende App prüfen",
+          "summary": "Die Kompatibilität einer installierten App kann das Upgrade blockieren.",
+          "checks": [
+            "Den von Setup genannten App-Namen und die Version notieren.",
+            "Beim offiziellen App-Anbieter die Unterstützung der Zielversion von Windows prüfen."
+          ],
+          "escalation": "Den vollständigen Code in Microsofts Installationshilfe prüfen; bei Wiederholung Code, Phase und PC-Modell an Microsoft Support geben.",
+          "scope": "Codes bei Installation oder Versionsupgrade von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "setup-80070070-50011",
+      "slug": "setup-80070070-50011",
+      "code": "0x80070070 – 0x50011",
+      "aliases": [
+        "0x80070070 - 0x50011"
+      ],
+      "category": "windows-setup",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/get-help-with-windows-upgrade-and-installation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업그레이드 저장 공간 확인",
+          "summary": "업그레이드에 사용할 여유 공간이 부족할 때 보일 수 있다.",
+          "checks": [
+            "설치 대상 드라이브와 표시된 여유 공간을 확인한다.",
+            "설치 화면이 요구하는 추가 공간과 비교하고 개인 파일의 백업 상태를 확인한다."
+          ],
+          "escalation": "Microsoft 설치 안내에서 전체 코드를 확인한다. 반복되면 코드·설치 단계·PC 모델을 Microsoft 지원에 전달한다.",
+          "scope": "Windows 10/11 설치·버전 업그레이드 중 표시된 코드."
+        },
+        "en": {
+          "title": "Check upgrade storage space",
+          "summary": "This may appear when the upgrade lacks available storage space.",
+          "checks": [
+            "Identify the installation drive and its displayed free space.",
+            "Compare the extra space requested by Setup and check personal-file backups."
+          ],
+          "escalation": "Look up the full code in Microsoft’s setup guidance; if repeated, send the code, setup phase and PC model to Microsoft Support.",
+          "scope": "Codes displayed during Windows 10/11 setup or a version upgrade."
+        },
+        "es": {
+          "title": "Revisar el espacio para actualizar",
+          "summary": "Puede aparecer cuando falta espacio disponible para la actualización.",
+          "checks": [
+            "Identifica la unidad de instalación y el espacio libre mostrado.",
+            "Compara el espacio adicional solicitado y comprueba las copias de tus archivos."
+          ],
+          "escalation": "Consulta el código completo en la guía de Microsoft; si se repite, envía código, fase y modelo al soporte de Microsoft.",
+          "scope": "Códigos durante la instalación o actualización de versión de Windows 10/11."
+        },
+        "zh": {
+          "title": "检查升级存储空间",
+          "summary": "升级可用空间不足时可能出现此代码。",
+          "checks": [
+            "确认安装目标驱动器及显示的剩余空间。",
+            "与安装程序要求的额外空间比较，并检查个人文件备份状态。"
+          ],
+          "escalation": "在 Microsoft 安装说明中核对完整代码；若再次出现，向 Microsoft 支持提供代码、阶段和电脑型号。",
+          "scope": "Windows 10/11 安装或版本升级中显示的代码。"
+        },
+        "ja": {
+          "title": "アップグレード用の空き容量を確認",
+          "summary": "アップグレードに使える空き容量が不足すると表示される場合がある。",
+          "checks": [
+            "インストール先ドライブと表示された空き容量を確認する。",
+            "セットアップが要求する追加容量と比較し、個人ファイルのバックアップを確認する。"
+          ],
+          "escalation": "Microsoft のセットアップ案内で完全なコードを確認し、繰り返す場合はコード、段階、PC 型番をサポートに伝える。",
+          "scope": "Windows 10/11 のセットアップまたはバージョンアップ中のコード。"
+        },
+        "de": {
+          "title": "Speicherplatz für das Upgrade prüfen",
+          "summary": "Der Code kann erscheinen, wenn verfügbarer Speicherplatz für das Upgrade fehlt.",
+          "checks": [
+            "Installationslaufwerk und angezeigten freien Speicher feststellen.",
+            "Mit dem von Setup angeforderten Zusatzplatz vergleichen und persönliche Dateisicherungen prüfen."
+          ],
+          "escalation": "Den vollständigen Code in Microsofts Installationshilfe prüfen; bei Wiederholung Code, Phase und PC-Modell an Microsoft Support geben.",
+          "scope": "Codes bei Installation oder Versionsupgrade von Windows 10/11."
+        }
+      }
+    },
+    {
+      "id": "setup-c1900200-20008",
+      "slug": "setup-c1900200-20008",
+      "code": "0xC1900200 – 0x20008",
+      "aliases": [
+        "0xC1900200 - 0x20008"
+      ],
+      "category": "windows-setup",
+      "brand": "Microsoft",
+      "models": [
+        "Windows 10",
+        "Windows 11"
+      ],
+      "sources": [
+        {
+          "label": "Microsoft Support",
+          "url": "https://support.microsoft.com/en-us/windows/deployment/install-upgrade/get-help-with-windows-upgrade-and-installation-errors"
+        }
+      ],
+      "text": {
+        "ko": {
+          "title": "업그레이드 최소 요구사항 확인",
+          "summary": "대상 Windows의 최소 요구사항을 충족하지 못했을 수 있다.",
+          "checks": [
+            "업그레이드하려는 Windows 버전과 PC 모델·사양을 확인한다.",
+            "해당 Windows 버전의 Microsoft 요구사항과 항목별로 비교한다."
+          ],
+          "escalation": "Microsoft 설치 안내에서 전체 코드를 확인한다. 반복되면 코드·설치 단계·PC 모델을 Microsoft 지원에 전달한다.",
+          "scope": "Windows 10/11 설치·버전 업그레이드 중 표시된 코드."
+        },
+        "en": {
+          "title": "Check minimum upgrade requirements",
+          "summary": "The PC may not meet the target Windows version’s minimum requirements.",
+          "checks": [
+            "Identify the target Windows version and the PC model/specifications.",
+            "Compare each item with Microsoft’s requirements for that Windows version."
+          ],
+          "escalation": "Look up the full code in Microsoft’s setup guidance; if repeated, send the code, setup phase and PC model to Microsoft Support.",
+          "scope": "Codes displayed during Windows 10/11 setup or a version upgrade."
+        },
+        "es": {
+          "title": "Revisar los requisitos mínimos",
+          "summary": "El equipo puede no cumplir los requisitos mínimos de la versión de destino.",
+          "checks": [
+            "Identifica la versión de Windows deseada y el modelo/especificaciones del PC.",
+            "Compara cada punto con los requisitos de Microsoft para esa versión."
+          ],
+          "escalation": "Consulta el código completo en la guía de Microsoft; si se repite, envía código, fase y modelo al soporte de Microsoft.",
+          "scope": "Códigos durante la instalación o actualización de versión de Windows 10/11."
+        },
+        "zh": {
+          "title": "检查升级最低要求",
+          "summary": "电脑可能不满足目标 Windows 版本的最低要求。",
+          "checks": [
+            "确认目标 Windows 版本及电脑型号和配置。",
+            "逐项对照 Microsoft 对该 Windows 版本的要求。"
+          ],
+          "escalation": "在 Microsoft 安装说明中核对完整代码；若再次出现，向 Microsoft 支持提供代码、阶段和电脑型号。",
+          "scope": "Windows 10/11 安装或版本升级中显示的代码。"
+        },
+        "ja": {
+          "title": "アップグレードの最小要件を確認",
+          "summary": "対象 Windows の最小要件を満たしていない可能性がある。",
+          "checks": [
+            "対象 Windows の版と PC の型番・仕様を確認する。",
+            "その Windows 版の Microsoft の要件と項目ごとに比較する。"
+          ],
+          "escalation": "Microsoft のセットアップ案内で完全なコードを確認し、繰り返す場合はコード、段階、PC 型番をサポートに伝える。",
+          "scope": "Windows 10/11 のセットアップまたはバージョンアップ中のコード。"
+        },
+        "de": {
+          "title": "Mindestanforderungen für das Upgrade prüfen",
+          "summary": "Der PC erfüllt möglicherweise die Mindestanforderungen der Zielversion nicht.",
+          "checks": [
+            "Zielversion von Windows und PC-Modell/Spezifikationen feststellen.",
+            "Jeden Punkt mit Microsofts Anforderungen für diese Windows-Version vergleichen."
+          ],
+          "escalation": "Den vollständigen Code in Microsofts Installationshilfe prüfen; bei Wiederholung Code, Phase und PC-Modell an Microsoft Support geben.",
+          "scope": "Codes bei Installation oder Versionsupgrade von Windows 10/11."
+        }
+      }
+    }
+  ]
+}

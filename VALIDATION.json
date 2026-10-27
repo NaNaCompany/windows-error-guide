@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "slug": "windows-error-guide",
+  "type": "directory",
+  "languages": [
+    "ko",
+    "en",
+    "es",
+    "zh",
+    "ja",
+    "de"
+  ],
+  "entries": 24,
+  "pages": 150,
+  "internalLinksChecked": 3433,
+  "externalLinksObserved": 21,
+  "publisherPages": 150,
+  "origin": "https://nanalab.kr/windows-error-guide",
+  "binariesHosted": 0,
+  "sourceHosts": [
+    "learn.microsoft.com",
+    "support.microsoft.com"
+  ],
+  "sourceUrlsCheckedStatically": 17,
+  "httpReachabilityChecked": false,
+  "browserOrPhysicalExecutionChecked": false
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "windows-error-guide",
+  "pass": true,
+  "testsPassed": 8,
+  "testsFailed": 0,
+  "source_sha256": "0be3aefbaae3fee6c454cc2ec4ca71b8b750eb795bc27fdd8181c6287af3a52b",
+  "dist_sha256": "c3505e536fdbc4190e22ad3582bd77047af44e887c291b9a8e0d0ab383fb9dbb",
+  "reproducibleBuild": true,
+  "browserOrPhysicalExecutionChecked": false
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "windows-error-guide",
+  "type": "directory",
+  "languages": [
+    "ko",
+    "en",
+    "es",
+    "zh",
+    "ja",
+    "de"
+  ],
+  "entries": 24,
+  "pages": 150,
+  "origin": "https://nanalab.kr/windows-error-guide",
+  "checkedAt": "2026-10-27",
+  "binariesHosted": 0
+}
